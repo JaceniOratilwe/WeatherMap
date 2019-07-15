@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!-- <ion-searchbar>
+  <ion-input placeholder="search"></ion-input>
+<ion-button (click)="submit()">Search the Location</ion-button>
+<ion-label>{{city}}</ion-label>
+</ion-searchbar>
+<ion-item *ngFor="let map of groceryList | async">
+  {{map.city}}
+ </ion-item> -->
+ <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search" [(ngModel)]="city">
+      <button type="submit" (click)="submit()">search</button>
+    </form>
+    {{list?.city.name}}
+    {{list?.list[0].main.temp}}
+    
+  </div>
+</ion-content>
