@@ -7,20 +7,19 @@
 </ion-header>
 
 <ion-content>
+
+    <br>
+  <br>
 <ion-grid>
- 
+ <br>
   <ion-row>
+     <table>
+       <tr><input type="text" placeholder="Search.." name="search" [(ngModel)]="city">
+              
+        <ion-button type="submit" size="small" shape="round" color="secondary" (click)="submit()">search</ion-button></tr>
+     </table>
+      
      
-      <ion-row>
-<div class="search">
-          <form>
-              <input type="text" placeholder="Search.." name="search" [(ngModel)]="city">
-              
-              <ion-button type="submit" size="small" shape="round" color="secondary" (click)="submit()">search</ion-button>
-            </form>
-          </div> 
-      </ion-row>
-              
   </ion-row>
  <ion-row>
  </ion-row>
@@ -56,19 +55,19 @@
             Day
          </ion-col>
       <ion-col>
-          {{list?.list[11].dt_txt | date: 'EEEE'}}
+          {{list?.list[11].dt_txt | date: 'EEE'}}
       </ion-col>
       <ion-col>
-          {{list?.list[19].dt_txt | date: 'EEEE'}}
+          {{list?.list[19].dt_txt | date: 'EEE'}}
       </ion-col>
       <ion-col>
-          {{list?.list[27].dt_txt | date: 'EEEE'}}
+          {{list?.list[27].dt_txt | date: 'EEE'}}
       </ion-col>
       <ion-col>
-          {{list?.list[35].dt_txt | date: 'EEEE'}}
+          {{list?.list[35].dt_txt | date: 'EEE'}}
       </ion-col>
       <ion-col>
-          {{list?.list[39].dt_txt | date: 'EEEE'}}
+          {{list?.list[39].dt_txt | date: 'EEE'}}
       </ion-col>
     </ion-row>
 
