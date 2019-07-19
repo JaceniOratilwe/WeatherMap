@@ -1,8 +1,59 @@
 ion-searchbar{
 
     width: 20%;
+    text-align: center;
 }
 ion-content{
-    --ion-background-color:rgb(174, 149, 233);
+    //--ion-background-color:rgba(11, 3, 31, 0.651);
+  --background:url(../../assets/images/WeatherWallpaper-Stormfly2.jpg)0 0/100% no-repeat;
 
 }
+ion-title{
+    text-align: center;
+    color: rgb(10, 10, 10);
+}
+
+h2{
+    color: rgb(10, 10, 10);
+    text-align: center;
+   // font-size: 200%;
+   // left: 60%;
+}
+
+p{
+    color: rgb(10, 10, 10);
+}
+h5{
+    text-align:right;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 8px;
+   right:16px;
+
+}
+h1{
+    color: rgb(10, 10, 10);
+    text-align: center;
+    font-size: 200%;
+   // left: 60%;
+}
+.search{
+    text-align:center;
+    //vertical-align: bottom;
+    position: absolute;
+    bottom: 95%;
+   right:40%;
+}
+h4{
+    text-align: center;
+    color: rgb(10, 10, 10);
+  }
+  p{
+      text-align: center;
+  }
+
+  input{
+    border: 2px solid rgba(71, 182, 197, 0.699); 
+  }
+  
+

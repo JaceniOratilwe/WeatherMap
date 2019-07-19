@@ -1,27 +1,145 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
     <ion-title>
-      Ionic Blank
+      Weather App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<!-- <ion-searchbar>
-  <ion-input placeholder="search"></ion-input>
-<ion-button (click)="submit()">Search the Location</ion-button>
-<ion-label>{{city}}</ion-label>
-</ion-searchbar>
-<ion-item *ngFor="let map of groceryList | async">
-  {{map.city}}
- </ion-item> -->
- <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search" [(ngModel)]="city">
-      <button type="submit" (click)="submit()">search</button>
-    </form>
-    {{list?.city.name}}
-    {{list?.list[0].main.temp}}
-    
-  </div>
+<ion-grid>
+ 
+  <ion-row>
+     
+      <ion-row>
+<div class="search">
+          <form>
+              <input type="text" placeholder="Search.." name="search" [(ngModel)]="city">
+              
+              <ion-button type="submit" size="small" shape="round" color="secondary" (click)="submit()">search</ion-button>
+            </form>
+          </div> 
+      </ion-row>
+              
+  </ion-row>
+ <ion-row>
+ </ion-row>
+</ion-grid>
+
+<h1></h1>
+<h1></h1>
+
+<h3> </h3>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-col><h1>{{list?.city.name}}</h1></ion-col>
+    </ion-col>
+   
+  
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-col>
+          <p>H {{list?.list[0].main.temp_max |number: '1.0-0'}} &#8451; / L {{list?.list[0].main.temp_min | number: '1.0-0' }} &#8451;</p>
+          <p><img src="http://openweathermap.org/img/w/{{list?.list[0].weather[0].icon}}.png" width="300"></p>
+          <h1>Today : {{list?.list[0].main.temp_max |number: '1.0-0'}} &#8451;</h1>
+          <p>{{list?.list[4].weather[0].description}}</p>
+      </ion-col>
+    </ion-col>
+  </ion-row>
+  
+  <ion-grid><!--for creating other days weather-->
+    <ion-row>
+      <!--Friday-->
+        <ion-col>
+            Day
+         </ion-col>
+      <ion-col>
+          {{list?.list[11].dt_txt | date: 'EEEE'}}
+      </ion-col>
+      <ion-col>
+          {{list?.list[19].dt_txt | date: 'EEEE'}}
+      </ion-col>
+      <ion-col>
+          {{list?.list[27].dt_txt | date: 'EEEE'}}
+      </ion-col>
+      <ion-col>
+          {{list?.list[35].dt_txt | date: 'EEEE'}}
+      </ion-col>
+      <ion-col>
+          {{list?.list[39].dt_txt | date: 'EEEE'}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row><!--Friday-->
+        <ion-col>
+           Temp
+        </ion-col>
+        <ion-col>
+            {{list?.list[11].main.temp_max |number: '1.0-0'}} &#8451;
+        </ion-col>
+        <ion-col>
+            {{list?.list[19].main.temp_max | number: '1.0-0' }} &#8451;
+        </ion-col>
+        <ion-col>
+            {{list?.list[27].main.temp_max | number: '1.0-0' }} &#8451;
+        </ion-col>
+        <ion-col>
+            {{list?.list[35].main.temp_max | number: '1.0-0' }} &#8451;
+        </ion-col>
+        <ion-col>
+            {{list?.list[39].main.temp_max | number: '1.0-0' }} &#8451;
+        </ion-col>
+      </ion-row>
+
+      <ion-row><!--Friday-->
+          <ion-col>
+              Icon
+           </ion-col>
+          <ion-col>
+              <img src="http://openweathermap.org/img/w/{{list?.list[11].weather[0].icon}}.png">
+          </ion-col>
+          <ion-col>
+              <img src="http://openweathermap.org/img/w/{{list?.list[19].weather[0].icon}}.png">
+          </ion-col>
+          <ion-col>
+              <img src="http://openweathermap.org/img/w/{{list?.list[27].weather[0].icon}}.png">
+          </ion-col>
+          <ion-col>
+              <img src="http://openweathermap.org/img/w/{{list?.list[35].weather[0].icon}}.png">
+          </ion-col>
+          <ion-col>
+              <img src="http://openweathermap.org/img/w/{{list?.list[39].weather[0].icon}}.png">
+          </ion-col>
+        </ion-row>
+
+
+          <ion-row><!--Friday-->
+              <ion-col>
+                  Des
+               </ion-col>
+              <ion-col>
+                  {{list?.list[11].weather[0].description}}
+              </ion-col>
+              <ion-col>
+                  {{list?.list[19].weather[0].description}}
+              </ion-col>
+              <ion-col>
+                  {{list?.list[27].weather[0].description}}
+              </ion-col>
+              <ion-col>
+                  {{list?.list[35].weather[0].description}}
+              </ion-col>
+              <ion-col>
+                  {{list?.list[39].weather[0].description}}
+              </ion-col>
+            </ion-row>
+
+  </ion-grid>
+
+</ion-grid>
+
+   
+   
 </ion-content>
